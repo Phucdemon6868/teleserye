@@ -1,0 +1,6 @@
+{
+  "name": "Teleserye Stream Pro - Media Downloader & Merger",
+  "description": "Giao diện quản lý tải và gộp video đa luồng hiện đại, tối ưu thay thế cho PyQt6 cổ điển.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

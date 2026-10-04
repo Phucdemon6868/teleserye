@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi" class="dark">
+  <head>
+    <script>
+      (function() {
+        try {
+          var _origFetch = window.fetch ? window.fetch.bind(window) : undefined;
+          var _currentFetch = _origFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _currentFetch;
+            },
+            set: function(fn) {
+              _currentFetch = fn;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {}
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teleserye Stream Pro - Media Downloader & Merger</title>
+    <meta name="description" content="Giao diện quản lý tải và gộp video đa luồng hiện đại, tối ưu thay thế cho PyQt6 cổ điển." />
+    <meta property="og:title" content="Teleserye Stream Pro - Media Downloader & Merger" />
+    <meta property="og:description" content="Giao diện quản lý tải và gộp video đa luồng hiện đại, tối ưu thay thế cho PyQt6 cổ điển." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-blue-600 selection:text-white min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
